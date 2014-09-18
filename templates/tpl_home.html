@@ -1,0 +1,42 @@
+<span ng-controller="homeCtrl">
+<header_view></header_view>
+<br><br>
+<div role="main" class="ui-content" is="content">
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="plus">
+          <a ng-click="addExpense()" data-transition="slide">Add Expense</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="bars">
+          <a ng-click="allExpense()">All Expense</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="check">
+          <a ng-click="expenseRequests()">Expense Requests</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="eye">
+          <a ng-click="currentStatus()">Current Status</a>
+        </li>
+      </ul>
+	  <ul data-role="listview" data-inset="true">
+        <li data-icon="comment">
+          <a ng-click="changePassword()">Notifications</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="user">
+          <a ng-click="changePassword()">Change Password</a>
+        </li>
+      </ul>
+	  <ul data-role="listview" data-inset="true">
+        <li data-icon="gear">
+          <a ng-click="changeSettings()">Settings</a>
+        </li>
+      </ul>
+    </div>
+<footer_view></footer_view>
+<span>

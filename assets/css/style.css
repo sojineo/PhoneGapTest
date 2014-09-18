@@ -1,0 +1,19 @@
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+.ui-table-columntoggle-btn {
+    display: none !important;
+}
+	core-list {
+      height: 100%;
+    }
+    core-list .item {
+      box-sizing: border-box;
+      height: 80px;
+      border-bottom: 1px solid #ddd;
+      padding: 4px;
+      cursor: default;
+      background-color: white;
+      overflow: hidden;
+    }

@@ -1,0 +1,7 @@
+<div data-role="header" data-position="fixed">
+      <h3>{{headerText}}</h3>
+      <a ng-if="logoutButton" class="ui-btn-right ui-icon-power ui-btn-icon-notext" href="#login"></a>
+	  <a ng-if="homeButton" class="ui-btn-right ui-icon-home ui-btn-icon-notext" ng-click="clickHomebutton()"></a>
+      <a ng-if="backButton" class="ui-btn-left ui-icon-arrow-l ui-btn-icon-notext" ng-click="clickBackbutton()">Button</a>
+      <a ng-if="notificationButton" class="ui-btn-right ui-icon-comment ui-btn-icon-notext" style="margin-right:30px;"></a>
+</div>

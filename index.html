@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="lib/jquery/css/jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  
+  <script src="lib/angular/js/angular.min.js"></script>
+  <script src="lib/angular/js/angular-route.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="lib/jquery/js/jquery-1.9.1.min.js"></script>
+  <script src="lib/jquery/js/jquery.mobile-1.4.3.min.js"></script>
+  <script src="cordova.js"></script>
+ <script>
+   function checkNetworkConnection(){
+			if(navigator.connection){
+				console.log('Cordova Fired');
+			}else{
+				console.log('Cordova Not Fired');
+			}
+			/*var networkState = navigator.connection.type;
+			return networkState;*/
+            /*var states = {};
+            states[Connection.UNKNOWN] = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI] = 'WiFi connection';
+            states[Connection.CELL_2G] = 'Cell 2G connection';
+            states[Connection.CELL_3G] = 'Cell 3G connection';
+            states[Connection.CELL_4G] = 'Cell 4G connection';
+            states[Connection.CELL] = 'Cell generic connection';
+            states[Connection.NONE] = 'No network connection';
+            if (states[networkState] == 'No network connection') {
+                navigator.notification.confirm(
+                          'No Internet Connection. Please connect the internet and relaunch the application.',
+                          onConfirmQuit,
+                          'No Internet Connection',
+                          'OK,Cancel'
+                      );
+            }*/
+  }
+ 
+				
+ 
+ $(document).on("pageshow","#home",function(event, ui){
+                console.log('home pageshow');
+				checkNetworkConnection();
+				
+  });
+  
+ $(document).on("pagebeforecreate","#home",function(event, ui){
+                console.log('home pagebeforecreate');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagecreate","#home",function(event, ui){
+                console.log('home pagecreate');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pageinit","#home",function(event, ui){
+                console.log('home pageinit');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforehide","#home",function(event, ui){
+                console.log('home pagebeforehide');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforeshow","#home",function(event, ui){
+                console.log('home pagebeforeshow');
+				checkNetworkConnection();
+				
+  });
+  
+   $(document).on("pageremove","#home",function(event, ui){
+                console.log('home pageremove');
+				checkNetworkConnection();
+				
+  });
+  
+   $(document).on("pagehide","#home",function(event, ui){
+                console.log('home pagehide');
+				checkNetworkConnection();
+				
+  });
+  
+  /*----------------NEW PAGE ----------------------------*/
+  
+  
+  $(document).on("pageshow","#add_expense",function(event, ui){
+                console.log('add_expense pageshow');
+				checkNetworkConnection();
+				
+  });
+  
+ $(document).on("pagebeforecreate","#add_expense",function(event, ui){
+                console.log('add_expense pagebeforecreate');				
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagecreate","#add_expense",function(event, ui){
+                console.log('add_expense pagecreate');	
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pageinit","#add_expense",function(event, ui){
+                console.log('add_expense pageinit');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforehide","#add_expense",function(event, ui){
+                console.log('add_expense pagebeforehide');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforeshow","#add_expense",function(event, ui){
+                console.log('add_expense pagebeforeshow');
+				checkNetworkConnection();
+				
+  });
+  
+   $(document).on("pageremove","#add_expense",function(event, ui){
+                console.log('add_expense pageremove');
+				checkNetworkConnection();
+				
+  });
+  
+   $(document).on("pagehide","#add_expense",function(event, ui){
+                console.log('add_expense pagehide');
+				checkNetworkConnection();
+				
+  });
+  
+  document.addEventListener("deviceready", function (e) {
+				console.log('deviceready');
+			}, false);
+  
+  function test(e){
+  /*alert('error');
+  e.preventDefault();
+  return false;*/
+  }
+  
+</script>  
+  <title>Expense Manager</title>
+</head>
+
+<body>
+  
+
+  
+
+  <!-- Page: home  -->
+  <div id="home" data-role="page" is="page">
+    <div data-role="header" data-position="fixed">
+      <h3>Header</h3>
+      <a class="ui-btn ui-btn-right ui-icon-power ui-btn-icon-notext" data-transition="slide" href="#login">Logout</a>
+      <a class="ui-btn ui-btn-right ui-icon-comment ui-btn-icon-notext" style="margin-right:30px;">Button</a>
+    </div>
+    <div role="main" class="ui-content" is="content">
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="plus">
+          <a href="add_expense.html" onClick="test(event);"  data-transition="slide">Add Expense</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="bars">
+          <a href="#all_expense" data-transition="slide">All Expense</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="check">
+          <a href="#expense_requests" data-transition="slide">Expense Requests</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="eye">
+          <a href="#current_status" data-transition="slide">Current Status</a>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+        <li data-icon="gear">
+          <a href="#change_password" data-transition="slide">Change Password</a>
+        </li>
+      </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h3>Footer</h3>
+    </div>
+  </div>
+  
+</body>
+
+</html>
