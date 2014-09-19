@@ -16,141 +16,252 @@
  <script>
    function checkNetworkConnection(){
 			if(navigator.connection){
-				console.log('Cordova Fired');
+				alert('Cordova Fired');
 			}else{
-				console.log('Cordova Not Fired');
+				alert('Cordova Not Fired');
 			}
-			/*var networkState = navigator.connection.type;
-			return networkState;*/
-            /*var states = {};
-            states[Connection.UNKNOWN] = 'Unknown connection';
-            states[Connection.ETHERNET] = 'Ethernet connection';
-            states[Connection.WIFI] = 'WiFi connection';
-            states[Connection.CELL_2G] = 'Cell 2G connection';
-            states[Connection.CELL_3G] = 'Cell 3G connection';
-            states[Connection.CELL_4G] = 'Cell 4G connection';
-            states[Connection.CELL] = 'Cell generic connection';
-            states[Connection.NONE] = 'No network connection';
-            if (states[networkState] == 'No network connection') {
-                navigator.notification.confirm(
-                          'No Internet Connection. Please connect the internet and relaunch the application.',
-                          onConfirmQuit,
-                          'No Internet Connection',
-                          'OK,Cancel'
-                      );
-            }*/
   }
  
+
+ $(document).on("pageload","#home",function(event, ui){
+                alert('home pageload');
+				checkNetworkConnection();
 				
+  }); 
+  
+  $(document).on("pagechange","#home",function(event, ui){
+                alert('home pagechange');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforeload","#home",function(event, ui){
+                alert('home pagebeforeload');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("mobileinit","#home",function(event, ui){
+                alert('home mobileinit');
+				checkNetworkConnection();
+				
+  });
+  
+  
  
  $(document).on("pageshow","#home",function(event, ui){
-                console.log('home pageshow');
+                alert('home pageshow');
 				checkNetworkConnection();
 				
   });
   
  $(document).on("pagebeforecreate","#home",function(event, ui){
-                console.log('home pagebeforecreate');
+                alert('home pagebeforecreate');
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pagecreate","#home",function(event, ui){
-                console.log('home pagecreate');
+                alert('home pagecreate');
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pageinit","#home",function(event, ui){
-                console.log('home pageinit');
+                alert('home pageinit');
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforehide","#home",function(event, ui){
-                console.log('home pagebeforehide');
+                alert('home pagebeforehide');
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeshow","#home",function(event, ui){
-                console.log('home pagebeforeshow');
+                alert('home pagebeforeshow');
 				checkNetworkConnection();
 				
   });
   
    $(document).on("pageremove","#home",function(event, ui){
-                console.log('home pageremove');
+                alert('home pageremove');
 				checkNetworkConnection();
 				
   });
   
    $(document).on("pagehide","#home",function(event, ui){
-                console.log('home pagehide');
+                alert('home pagehide');
 				checkNetworkConnection();
 				
   });
   
-  /*----------------NEW PAGE ----------------------------*/
+  /*----------------add_expense PAGE ----------------------------*/
+  
+  $(document).on("pageload","#add_expense",function(event, ui){
+                alert('add_expense pageload');
+				checkNetworkConnection();
+				
+  }); 
+  
+  $(document).on("pagechange","#add_expense",function(event, ui){
+                alert('add_expense pagechange');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforeload","#add_expense",function(event, ui){
+                alert('add_expense pagebeforeload');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("mobileinit","#add_expense",function(event, ui){
+                alert('add_expense mobileinit');
+				checkNetworkConnection();
+				
+  });
   
   
   $(document).on("pageshow","#add_expense",function(event, ui){
-                console.log('add_expense pageshow');
+                alert('add_expense pageshow');
 				checkNetworkConnection();
 				
   });
   
  $(document).on("pagebeforecreate","#add_expense",function(event, ui){
-                console.log('add_expense pagebeforecreate');				
+                alert('add_expense pagebeforecreate');				
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pagecreate","#add_expense",function(event, ui){
-                console.log('add_expense pagecreate');	
+                alert('add_expense pagecreate');	
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pageinit","#add_expense",function(event, ui){
-                console.log('add_expense pageinit');
+                alert('add_expense pageinit');
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforehide","#add_expense",function(event, ui){
-                console.log('add_expense pagebeforehide');
+                alert('add_expense pagebeforehide');
 				checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeshow","#add_expense",function(event, ui){
-                console.log('add_expense pagebeforeshow');
+                alert('add_expense pagebeforeshow');
 				checkNetworkConnection();
 				
   });
   
    $(document).on("pageremove","#add_expense",function(event, ui){
-                console.log('add_expense pageremove');
+                alert('add_expense pageremove');
 				checkNetworkConnection();
 				
   });
   
    $(document).on("pagehide","#add_expense",function(event, ui){
-                console.log('add_expense pagehide');
+                alert('add_expense pagehide');
+				checkNetworkConnection();
+				
+  });
+  
+  /*----------------change_password PAGE ----------------------------*/
+  
+  $(document).on("pageload","#change_password",function(event, ui){
+                alert('change_password pageload');
+				checkNetworkConnection();
+				
+  }); 
+  
+  $(document).on("pagechange","#change_password",function(event, ui){
+                alert('change_password pagechange');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforeload","#change_password",function(event, ui){
+                alert('change_password pagebeforeload');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("mobileinit","#change_password",function(event, ui){
+                alert('change_password mobileinit');
+				checkNetworkConnection();
+				
+  });
+  
+  
+  $(document).on("pageshow","#change_password",function(event, ui){
+                alert('change_password pageshow');
+				checkNetworkConnection();
+				
+  });
+  
+ $(document).on("pagebeforecreate","#change_password",function(event, ui){
+                alert('change_password pagebeforecreate');				
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagecreate","#change_password",function(event, ui){
+                alert('change_password pagecreate');	
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pageinit","#change_password",function(event, ui){
+                alert('change_password pageinit');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforehide","#change_password",function(event, ui){
+                alert('change_password pagebeforehide');
+				checkNetworkConnection();
+				
+  });
+  
+  $(document).on("pagebeforeshow","#change_password",function(event, ui){
+                alert('change_password pagebeforeshow');
+				checkNetworkConnection();
+				
+  });
+  
+   $(document).on("pageremove","#change_password",function(event, ui){
+                alert('change_password pageremove');
+				checkNetworkConnection();
+				
+  });
+  
+   $(document).on("pagehide","#change_password",function(event, ui){
+                alert('change_password pagehide');
 				checkNetworkConnection();
 				
   });
   
   document.addEventListener("deviceready", function (e) {
-				console.log('deviceready');
+				alert('deviceready');
+			}, false);
+  document.addEventListener("backbutton", function (e) {
+				alert('backbutton');
+				window.history.back();
 			}, false);
   
-  function test(e){
-  /*alert('error');
-  e.preventDefault();
-  return false;*/
-  }
+function goBack() {
+    window.history.back();
+}
+
+function goHome() {
+    location.href='index.html';
+}
   
 </script>  
   <title>Expense Manager</title>
@@ -191,7 +302,7 @@
       </ul>
       <ul data-role="listview" data-inset="true">
         <li data-icon="gear">
-          <a href="#change_password" data-transition="slide">Change Password</a>
+          <a href="change_password.html" data-transition="slide">Change Password</a>
         </li>
       </ul>
     </div>
