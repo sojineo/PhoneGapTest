@@ -14,11 +14,9 @@
   <script src="lib/jquery/js/jquery.mobile-1.4.3.min.js"></script>
   <script src="cordova.js"></script>
  <script>
-   function checkNetworkConnection(){		
-	//var networkState = '';
-	
-	network = navigator.connection.type;;
-    alert("fdfd");
+   function checkConnection() {
+    var networkState = navigator.network.connection.type;
+
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
@@ -27,9 +25,9 @@
     states[Connection.CELL_3G]  = 'Cell 3G connection';
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
-    alert('Connection type: ' + states[network]);
-	
-  }
+
+    alert('Connection type: ' + states[networkState]);
+}
  
  
 
