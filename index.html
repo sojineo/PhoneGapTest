@@ -36,7 +36,11 @@
     //alert('Connection type: ' + states[networkState]);
 }
  
- 
+ function onConfirmQuit(button) {
+	if (button == "1") {
+		navigator.app.exitApp();
+	}
+}
 
  $(document).on("pageload","#home",function(event, ui){
                 alert('home pageload');
