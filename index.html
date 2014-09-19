@@ -14,15 +14,11 @@
   <script src="lib/jquery/js/jquery.mobile-1.4.3.min.js"></script>
   <script src="cordova.js"></script>
  <script>
-   function checkNetworkConnection(){
-			/*if(navigator.connection){
-				alert('Cordova Fired');
-			}else{
-				alert('Cordova Not Fired');
-			}*/			
+   function checkNetworkConnection(){		
 	var networkState = '';
 	networkState = navigator.network.connection.type;
-	var states = {};
+	alert(networkState);
+	/*var states = {};
 	states[Connection.UNKNOWN] = 'Unknown connection';
 	states[Connection.ETHERNET] = 'Ethernet connection';
 	states[Connection.WIFI] = 'WiFi connection';
@@ -31,7 +27,7 @@
 	states[Connection.CELL_4G] = 'Cell 4G connection';
 	states[Connection.CELL] = 'Cell generic connection';
 	states[Connection.NONE] = 'No network connection';
-	alert(states[networkState]);
+	alert(states[networkState]);*/
   }
  
 
