@@ -15,7 +15,7 @@
   <script src="cordova.js"></script>
  <script>
    function checkNetworkConnection() {
-    var networkState = navigator.network.connection.type;
+    var networkState = navigator.connection.type;
 
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -24,6 +24,7 @@
     states[Connection.CELL_2G]  = 'Cell 2G connection';
     states[Connection.CELL_3G]  = 'Cell 3G connection';
     states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
@@ -33,25 +34,25 @@
 
  $(document).on("pageload","#home",function(event, ui){
                 alert('home pageload');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   }); 
   
   $(document).on("pagechange","#home",function(event, ui){
                 alert('home pagechange');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeload","#home",function(event, ui){
                 alert('home pagebeforeload');
-				checkNetworkConnection();
+				//heckNetworkConnection();
 				
   });
   
   $(document).on("mobileinit","#home",function(event, ui){
                 alert('home mobileinit');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
@@ -59,49 +60,49 @@
  
  $(document).on("pageshow","#home",function(event, ui){
                 alert('home pageshow');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
  $(document).on("pagebeforecreate","#home",function(event, ui){
                 alert('home pagebeforecreate');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagecreate","#home",function(event, ui){
                 alert('home pagecreate');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pageinit","#home",function(event, ui){
                 alert('home pageinit');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforehide","#home",function(event, ui){
                 alert('home pagebeforehide');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeshow","#home",function(event, ui){
                 alert('home pagebeforeshow');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
    $(document).on("pageremove","#home",function(event, ui){
                 alert('home pageremove');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
    $(document).on("pagehide","#home",function(event, ui){
                 alert('home pagehide');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
@@ -109,74 +110,74 @@
   
   $(document).on("pageload","#add_expense",function(event, ui){
                 alert('add_expense pageload');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   }); 
   
   $(document).on("pagechange","#add_expense",function(event, ui){
                 alert('add_expense pagechange');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeload","#add_expense",function(event, ui){
                 alert('add_expense pagebeforeload');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("mobileinit","#add_expense",function(event, ui){
                 alert('add_expense mobileinit');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   
   $(document).on("pageshow","#add_expense",function(event, ui){
                 alert('add_expense pageshow');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
  $(document).on("pagebeforecreate","#add_expense",function(event, ui){
                 alert('add_expense pagebeforecreate');				
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagecreate","#add_expense",function(event, ui){
                 alert('add_expense pagecreate');	
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pageinit","#add_expense",function(event, ui){
                 alert('add_expense pageinit');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforehide","#add_expense",function(event, ui){
                 alert('add_expense pagebeforehide');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeshow","#add_expense",function(event, ui){
                 alert('add_expense pagebeforeshow');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
    $(document).on("pageremove","#add_expense",function(event, ui){
                 alert('add_expense pageremove');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
    $(document).on("pagehide","#add_expense",function(event, ui){
                 alert('add_expense pagehide');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
@@ -184,79 +185,80 @@
   
   $(document).on("pageload","#change_password",function(event, ui){
                 alert('change_password pageload');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   }); 
   
   $(document).on("pagechange","#change_password",function(event, ui){
                 alert('change_password pagechange');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeload","#change_password",function(event, ui){
                 alert('change_password pagebeforeload');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("mobileinit","#change_password",function(event, ui){
                 alert('change_password mobileinit');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   
   $(document).on("pageshow","#change_password",function(event, ui){
                 alert('change_password pageshow');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
  $(document).on("pagebeforecreate","#change_password",function(event, ui){
                 alert('change_password pagebeforecreate');				
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagecreate","#change_password",function(event, ui){
                 alert('change_password pagecreate');	
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pageinit","#change_password",function(event, ui){
                 alert('change_password pageinit');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforehide","#change_password",function(event, ui){
                 alert('change_password pagebeforehide');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   $(document).on("pagebeforeshow","#change_password",function(event, ui){
                 alert('change_password pagebeforeshow');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
    $(document).on("pageremove","#change_password",function(event, ui){
                 alert('change_password pageremove');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
    $(document).on("pagehide","#change_password",function(event, ui){
                 alert('change_password pagehide');
-				checkNetworkConnection();
+				//checkNetworkConnection();
 				
   });
   
   document.addEventListener("deviceready", function (e) {
 				alert('deviceready');
+				checkNetworkConnection();
 			}, false);
   document.addEventListener("backbutton", function (e) {
 				alert('backbutton');
