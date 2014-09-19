@@ -16,9 +16,14 @@
  <script>
    function checkNetworkConnection(){		
 	var networkState = '';
-	networkState = navigator.network.connection.type;
-	alert(networkState);
-	/*var states = {};
+	try {
+		networkState = navigator.network.connection.type;
+	} catch (e) {
+		$.getScript('cordova.js');
+		networkState = navigator.network.connection.type;
+	}
+
+	var states = {};
 	states[Connection.UNKNOWN] = 'Unknown connection';
 	states[Connection.ETHERNET] = 'Ethernet connection';
 	states[Connection.WIFI] = 'WiFi connection';
@@ -27,8 +32,15 @@
 	states[Connection.CELL_4G] = 'Cell 4G connection';
 	states[Connection.CELL] = 'Cell generic connection';
 	states[Connection.NONE] = 'No network connection';
-	alert(states[networkState]);*/
+	alert(states[networkState]);
+	
   }
+  
+  function onConfirmQuit(button) {
+	if (button == "1") {
+		navigator.app.exitApp();
+	}
+}
  
 
  $(document).on("pageload","#home",function(event, ui){
