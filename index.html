@@ -17,26 +17,20 @@
    function checkNetworkConnection(){		
 	//var networkState = '';
 	
-	if(navigator){
-		alert('navigator is defined');
-		if(navigator.network){
-			alert('navigator network is defined');
-			if(navigator.network.connection){
-				alert('navigator.network.connection is defined');
-				if(navigator.network.connection.type){
-					alert('navigator.network.connection.type is defined');
-				}
-			}
-		}
-	}
+	network = navigator.network.connection.type;
+    alert("fdfd");
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.NONE]     = 'No network connection';
+    alert('Connection type: ' + states[network]);
 	
   }
-  
-  function onConfirmQuit(button) {
-	if (button == "1") {
-		navigator.app.exitApp();
-	}
-}
+ 
  
 
  $(document).on("pageload","#home",function(event, ui){
