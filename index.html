@@ -15,7 +15,20 @@
   <script src="cordova.js"></script>
  <script>
    function checkNetworkConnection(){		
-	alert('checkNetworkConnection');
+	//var networkState = '';
+	
+	if(navigator){
+		alert('navigator is defined');
+		if(navigator.network){
+			alert('navigator network is defined');
+			if(navigator.network.connection){
+				alert('navigator.network.connection is defined');
+				if(navigator.network.connection.type){
+					alert('navigator.network.connection.type is defined');
+				}
+			}
+		}
+	}
 	
   }
   
